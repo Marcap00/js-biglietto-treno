@@ -69,16 +69,16 @@ console.log('age', age, typeof age);
 
 /* Fase di lavorazione dei dati */
 // Elaboro lo sconto a seconda dell'età
-const priceToKm = 0.21 * km; 
+const priceToKm = parseFloat(0.21 * km).toFixed(2); 
 console.log('priceToKm', priceToKm);
 
-const discountMinor = (discountFirst * priceToKm)  /  100;
+const discountMinor = parseFloat((discountFirst * priceToKm)  /  100).toFixed(2);
 console.log('discountMinor', discountMinor);
 
-const discountMajor = (discountSecond * priceToKm)  /  100;
+const discountMajor = parseFloat((discountSecond * priceToKm)  /  100).toFixed(2);
 console.log('discountMajor', discountMajor);
 
-let price = priceToKm;
+let  price = priceToKm;
 
 if (age >= 65) {
     price = discountMajor;
@@ -89,4 +89,12 @@ console.log('price', price);
 
 /* Fase di output */
 //Stampo il messaggio
-resultElement.innerText = `Il prezzo del tuo biglietto è ${price}`;
+resultElement.innerText = `Il prezzo del tuo biglietto è € ${price}`;
+if (age >= 65) {
+    resultElement.innerText = `Il prezzo originale era € ${priceToKm}
+    Il prezzo scontato del tuo biglietto è € ${price}`;
+} else if (age < 18) {
+    resultElement.innerText = `Il prezzo originale era € ${priceToKm}
+    Il prezzo scontato del tuo biglietto è € ${price}`;
+}
+console.log('price', price);
