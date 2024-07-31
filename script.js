@@ -41,3 +41,33 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 4. Chiedo all'utente l'età del passeggero
 5. Calcolo il prezzo totale del viaggio
 6. Stampo il messaggio in pagina */
+
+/* Fase preparatoria */
+
+//Recupero l'elemento in pagina
+const priceElement = document.getElementById('price');
+console.log(priceElement);
+// Preparo gli elementi conosciuti
+let km = 1;
+console.log(km);
+
+const priceToKm = 0.21 * km; 
+console.log(priceToKm);
+
+const discountFirst = 20;
+console.log(discountFirst);
+
+const discountSecond = 40;
+console.log(discountSecond);
+
+const discountMinor = (discountFirst * priceToKm)  /  100;
+console.log(discountMinor);
+
+const discountMajor = (discountSecond * priceToKm)  /  100;
+console.log(discountMajor);
+
+/* Fase di raccolta dei dati */
+
+/* Fase di lavorazione dei dati */
+
+/* Fase di output */
