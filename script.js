@@ -48,34 +48,45 @@ const resultElement = document.getElementById('result');
 console.log(resultElement);
 // Preparo gli elementi conosciuti
 let km = 1;
-console.log(km);
+console.log('km', km);
 
-const priceToKm = 0.21 * km; 
-console.log(priceToKm);
 
 const discountFirst = 20;
-console.log(discountFirst);
+console.log('discountFirst',  discountFirst);
 
 const discountSecond = 40;
-console.log(discountSecond);
+console.log('discountSecond', discountSecond);
 
-const discountMinor = (discountFirst * priceToKm)  /  100;
-console.log(discountMinor);
-
-const discountMajor = (discountSecond * priceToKm)  /  100;
-console.log(discountMajor);
 
 /* Fase di raccolta dei dati */
 // Chiedo all'utente il numero di chilometri che vuole percorrere
 km = parseInt(prompt('Inserisci quanti km vuoi percorrere', 30));
-console.log(km, typeof km);
+console.log('km', km, typeof km);
 
 // Chiedo all'utente l'età del passeggero
 const age = parseInt(prompt('Inserisci la tua età', 68));
-console.log(age, typeof age);
+console.log('age', age, typeof age);
 
 /* Fase di lavorazione dei dati */
 // Elaboro lo sconto a seconda dell'età
+const priceToKm = 0.21 * km; 
+console.log('priceToKm', priceToKm);
 
+const discountMinor = (discountFirst * priceToKm)  /  100;
+console.log('discountMinor', discountMinor);
+
+const discountMajor = (discountSecond * priceToKm)  /  100;
+console.log('discountMajor', discountMajor);
+
+let price = priceToKm;
+
+if (age >= 65) {
+    price = discountMajor;
+} else if (age < 18) {
+    price = discountMinor;
+}
+console.log('price', price);
 
 /* Fase di output */
+//Stampo il messaggio
+resultElement.innerText = `Il prezzo del tuo biglietto è ${price}`;
