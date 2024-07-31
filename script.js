@@ -43,7 +43,6 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 6. Stampo il messaggio in pagina */
 
 /* Fase preparatoria */
-
 //Recupero l'elemento in pagina
 const priceElement = document.getElementById('price');
 console.log(priceElement);
@@ -67,6 +66,13 @@ const discountMajor = (discountSecond * priceToKm)  /  100;
 console.log(discountMajor);
 
 /* Fase di raccolta dei dati */
+// Chiedo all'utente il numero di chilometri che vuole percorrere
+km = parseInt(prompt('Inserisci quanti km vuoi percorrere', 30));
+console.log(km, typeof km);
+
+// Chiedo all'utente l'età del passeggero
+const age = parseInt(prompt('Inserisci la tua età', 68));
+console.log(age, typeof age);
 
 /* Fase di lavorazione dei dati */
 
