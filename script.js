@@ -99,9 +99,9 @@ ageElement.innerText = age;
 
 kmElement.innerText = km;
 
-resultElement.innerText = `Il prezzo del tuo biglietto è € ${price}`;
+resultElement.innerText = `Il prezzo del tuo biglietto è: € ${price}`;
 if (age >= 65 || age < 18) {
-    resultElement.innerText = `Il prezzo originale era € ${priceToKm}
-    Il prezzo scontato del tuo biglietto è € ${price}`;
+    resultElement.innerText = `Il prezzo originale era: € ${priceToKm}
+    Il prezzo scontato del tuo biglietto è: € ${price}`;
 } 
 console.log('price', price);
