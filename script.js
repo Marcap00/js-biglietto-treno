@@ -46,6 +46,12 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 //Recupero l'elemento in pagina
 const resultElement = document.getElementById('result');
 console.log(resultElement);
+
+const ageElement = document.getElementById('age');
+console.log(ageElement)
+
+const kmElement = document.getElementById('km');
+console.log(kmElement)
 // Preparo gli elementi conosciuti
 let km = 1;
 console.log('km', km);
@@ -89,6 +95,10 @@ console.log('price', price);
 
 /* Fase di output */
 //Stampo il messaggio
+ageElement.innerText = age;
+
+kmElement.innerText = km;
+
 resultElement.innerText = `Il prezzo del tuo biglietto è € ${price}`;
 if (age >= 65 || age < 18) {
     resultElement.innerText = `Il prezzo originale era € ${priceToKm}
