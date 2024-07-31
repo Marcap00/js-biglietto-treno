@@ -44,8 +44,8 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 /* Fase preparatoria */
 //Recupero l'elemento in pagina
-const priceElement = document.getElementById('price');
-console.log(priceElement);
+const resultElement = document.getElementById('result');
+console.log(resultElement);
 // Preparo gli elementi conosciuti
 let km = 1;
 console.log(km);
@@ -75,5 +75,7 @@ const age = parseInt(prompt('Inserisci la tua età', 68));
 console.log(age, typeof age);
 
 /* Fase di lavorazione dei dati */
+// Elaboro lo sconto a seconda dell'età
+
 
 /* Fase di output */
