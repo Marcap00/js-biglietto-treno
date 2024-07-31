@@ -27,3 +27,17 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 - Abbellire col CSS
  */
+
+/* 
+1. Recupero gli elementi dal DOM
+2. Definisco le variabili di cui sono a conoscenza: 
+    - il prezzo del biglietto è definito in base ai km (0.21 € al km)
+
+    - va applicato uno sconto del 20% per i minorenni
+
+    - va applicato uno sconto del 40% per gli over 65.
+
+3. Chiedo all'utente il numero di chilometri che vuole percorrere
+4. Chiedo all'utente l'età del passeggero
+5. Calcolo il prezzo totale del viaggio
+6. Stampo il messaggio in pagina */
