@@ -42,8 +42,8 @@ ul li:not(:last-child) {
 
 #age,
 #km {
+    display: inline-block;
+   
     padding: 5px;
     border-radius: 5px;
-
-    display: inline-block;
 }
