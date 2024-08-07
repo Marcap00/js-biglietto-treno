@@ -75,21 +75,21 @@ console.log('age', age, typeof age);
 
 /* Fase di lavorazione dei dati */
 // Elaboro lo sconto a seconda dell'età
-const priceToKm = parseFloat(0.21 * km).toFixed(2); 
+const priceToKm = parseInt(0.21 * km).toFixed(2); 
 console.log('priceToKm', priceToKm);
 
-const discountMinor = parseFloat((discountFirst * priceToKm)  /  100).toFixed(2);
+const discountMinor = parseInt((discountFirst * priceToKm)  /  100).toFixed(2);
 console.log('discountMinor', discountMinor);
 
-const discountMajor = parseFloat((discountSecond * priceToKm)  /  100).toFixed(2);
+const discountMajor = parseInt((discountSecond * priceToKm)  /  100).toFixed(2);
 console.log('discountMajor', discountMajor);
 
 let  price = priceToKm;
 
 if (age >= 65) {
-    price = discountMajor;
+    price = priceToKm - discountMajor;
 } else if (age < 18) {
-    price = discountMinor;
+    price = priceToKm - discountMinor;
 }
 console.log('price', price);
 
